@@ -10,9 +10,9 @@ function page() {
   return (
     <div className='justify-center'>
         <div className='w-7/10 grid grid-cols-2 text-cyan-600'>
-            {tasks.map(task =>(
+            {tasks.map((task, i) =>(
                 <div>
-                    <TaskCard task={task} key="{task.id}"/>
+                    <TaskCard task={task} key={i}/>
                 </div>
             ))}
         </div>
