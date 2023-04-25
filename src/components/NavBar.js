@@ -10,7 +10,7 @@ export function NavBar() {
     const {tasks} = useTasks()
 
     return (
-        <header className='flex justify-between items-center bg-green-600 px-28 py-3 text-cyan-600' >
+        <header className='flex justify-between items-center bg-green-600 px-28 py-3 text-blue-900' >
             <Link href='/'>
                 <h1 className='font-bold text-2xl text-blue-900'>
                     TaskApp
