@@ -1,0 +1,15 @@
+============https://www.youtube.com/watch?v=Ac9J_yyQqOI=============
+====================================================================
+
+>npx create-next-app@latest --experimental-app
+>name: nextjs-context-crud
+>cd nextjs-context-crud
+>npm run dev
+>npm install uuid 
+>npm install react-hook-form 
+>npm i react-hot-toast
+>npm i -g vercel
+
+===================================
+========parada 1: 01:17:39=========
+========parada 2: 00:00:00=========
