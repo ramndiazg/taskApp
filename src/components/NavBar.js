@@ -3,11 +3,12 @@
 
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { useTasks } from '@/context/TasksContext';
+//import { useTasks } from '@/context/TasksContext';
+import { UseTasks } from '@/hooks/useTaskContext'; 
 
 export function NavBar() {
     const router = useRouter()
-    const {tasks} = useTasks()
+    const {tasks} = UseTasks()
 
     return (
         <header className='flex justify-between items-center bg-green-600 px-28 py-3 text-blue-900' >

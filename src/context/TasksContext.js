@@ -6,11 +6,8 @@ import { useLocalStorage } from '@/hooks/useLocalstorage';//////xxx
 //const { v4: uuidv4 } = require('uuid');
 export const TaskContext = createContext();
 
-export const useTasks = () => {
-    const context = useContext(TaskContext)
-    if (!context) throw new Error('useTask must used within a provider')
-    return context;
-}
+
+
 
 export const Taskprovider = ({children}) => {
     const [tasks, setTasks] = useLocalStorage("tasks", []);////////xxx

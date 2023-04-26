@@ -1,15 +1,16 @@
 "use client";
-import { useTasks } from '@/context/TasksContext'
+//import { useTasks } from '@/context/TasksContext'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { toast } from "react-hot-toast";
+import { UseTasks } from '@/hooks/useTaskContext'
 
 
-function page({params}) {
+function Page({params}) {
   
   //const [task, setTask] = useState({title:"", description:""});
-  const {tasks, createTask, updateTask} = useTasks();
+  const {tasks, createTask, updateTask} = UseTasks();
   const router = useRouter();
   const {register, handleSubmit, setValue, formState:{errors}} = useForm();
 
@@ -44,10 +45,10 @@ function page({params}) {
     if(params.id){
       //alert(params.id)
       //alert(task)
-      const taskFound = tasks.find((task) => task.id === params.id);
-      if(taskFound) {
-        setValue('title', taskFound.title)
-        setValue('description', taskFound.description)
+      const TaskFound = tasks.find((task) => task.id === params.id);
+      if(TaskFound) {
+        setValue('title', TaskFound.title)
+        setValue('description', TaskFound.description)
         //setTask({
         //  title:taskFound.title, 
         //  description:taskFound.description
@@ -94,4 +95,4 @@ function page({params}) {
   )
 }
 
-export default page
+export default Page

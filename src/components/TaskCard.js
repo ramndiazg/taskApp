@@ -1,10 +1,11 @@
 import { useRouter } from "next/navigation"
-import { useTasks } from "@/context/TasksContext"
+//import { useTasks } from "@/context/TasksContext"
+import { UseTasks } from "@/hooks/useTaskContext";
 import { toast } from "react-hot-toast";
 
 export const TaskCard = ({ task }) => {
     const router = useRouter()
-    const {deleteTask} = useTasks()
+    const {deleteTask} = UseTasks()
     return (
         <div className="bg-blue-300 hover:bg-blue-500 cursor-poiter px-20 py-10 m-5 flex-grow justify-center rounded-md  text-bold"
             onClick={()=>router.push(`/edit/${task.id}`)}
